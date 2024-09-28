@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trackify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cotainer" id="cont">
+      <h1>Trackify - Lets Spend Money Smarter!!!</h1>
+      <form id="entryForm">
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          required
+        />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit" id="addentry">Add Entry</button>
+      </form>
+      <table id="entryTable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="summary">
+        <h2>Summary</h2>
+        <p>Total Income: <span id="totalIncome">0</span></p>
+        <p>Total Expense: <span id="totalExpense">0</span></p>
+        <p>Net Balance: <span id="netBalance">0</span></p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
